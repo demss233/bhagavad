@@ -27,6 +27,7 @@ const Container = () => {
         {bhagvad.map((element, index) => {
           return (
             <LinkHeader
+              key={index + 100}
               headers={[
                 index + 1,
                 element.name,
