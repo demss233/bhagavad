@@ -7,9 +7,10 @@ import fetch_verses from "@/utils/fetch_verses";
 import Heading from "@/components/Heading";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
 export default function Page() {
-  let [verses, setVerses] = useState<any[]>([]);
-  let [loaded, setLoaded] = useState(false);
+  const [verses, setVerses] = useState<any[]>([]);
+  const [loaded, setLoaded] = useState(false);
   const params = useParams();
 
   useEffect(() => {

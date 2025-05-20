@@ -6,7 +6,7 @@ import fetch_chapters from "@/utils/fetch_chapters";
 import LinkHeader from "./Links";
 
 const Container = () => {
-  let [bhagvad, setBhagvad] = useState<any[]>([]);
+  const [bhagvad, setBhagvad] = useState([]);
 
   useEffect(() => {
     fetch_chapters()
@@ -20,7 +20,10 @@ const Container = () => {
 
   return (
     <>
-      <div className="grid w-[90%] mx-auto mt-16 grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-3 items-center">
+      <div
+        key={2}
+        className="grid w-[90%] mx-auto mt-16 grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-3 items-center"
+      >
         {bhagvad.map((element, index) => {
           return (
             <LinkHeader
