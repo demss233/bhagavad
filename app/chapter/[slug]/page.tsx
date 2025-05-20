@@ -9,7 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function Page() {
-  const [verses, setVerses] = useState<any[]>([]);
+  const [verses, setVerses] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const params = useParams();
 
@@ -33,7 +33,12 @@ export default function Page() {
             className="flex flex-col w-[90%] mx-auto mt-10 gap-10 grid-cols-3"
           >
             {verses.map((element, index) => {
-              return <Heading header={`${index + 1}. ${element}`}></Heading>;
+              return (
+                <Heading
+                  key={index + 10}
+                  header={`${index + 1}. ${element}`}
+                ></Heading>
+              );
             })}
           </div>
           <Footer></Footer>
