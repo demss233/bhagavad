@@ -57,7 +57,10 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-gray-200">
+            <a
+              href="https://github.com/demss233/bhagavad"
+              className="hover:text-gray-200"
+            >
               Github
             </a>
           </li>
